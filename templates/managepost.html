@@ -1,0 +1,31 @@
+{% extends 'alumniheader.html' %} {% block title%} Manage_post {%endblock title%}{%load static%}
+{% block body%}
+<h1 class="text-center text-success">Thank you for creating this valuable blogs!</h1>
+<div class="container mt-3">
+    <div class="row my-3">
+        {% for blog in blogs %}
+        <div class="col-md-4">
+            <div class="card row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="width: 24rem;">
+  
+                <img class="card-img-top bd-placeholder-img" width="200" height="250"" src="{%static 'images/a6.jfif'%}" alt="Card image cap"></img>
+                <div class="card-body">
+                        <strong class="d-inline-block mb-2 text-primary">
+                         {{blog.name}}
+                          </strong>
+                <h5 class="card-title">{{blog.title}}</h5>
+                <p class="card-text">{{blog.content}}</p>
+               <a href="#" class="btn btn-primary">Delete</a>
+               <a href="#" class="btn btn-primary text-md-end">Edit</a>
+
+              </div>
+  
+            </div>
+        </div>
+
+        {% if forloop.counter|divisibleby:3%}
+    </div>
+    <div class="row my-3">
+        {%endif%}
+        {%endfor%}</div>
+</div>
+{% endblock body%}

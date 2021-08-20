@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    font-weight: normal;
+}
+
+section {
+    padding: 1rem;
+}
+
+header .mainhead {
+    background-color: darkblue;
+    margin-bottom: .1rem;
+}
+
+header .logo {
+    width: 20%;
+}
+
+header .logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+header .collegename {
+    color: #fff;
+    width: 70%;
+    margin: 1rem 0;
+}
+
+.statement p {
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1rem 1rem;
+    padding: 1rem 1rem;
+    text-align: center;
+    font-weight: lighter;
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 1rem 2rem rgba(250, 125, 9, 0.3);
+}
+
+.statement p:hover {
+    box-shadow: 0 1rem 2rem rgba(247, 84, 9, 0.5);
+}
+
+.content {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.content .news {
+    background-color: rgb(231, 211, 211);
+    box-shadow: 0 1rem 2rem rgba(161, 243, 83, 0.5);
+    width: 50%;
+    margin-right: 2rem;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.content .news:hover {
+    box-shadow: 0 1rem 2rem rgba(178, 245, 55, 0.7);
+}
+
+.content .highlights {
+    background-color: rgb(154, 245, 154);
+    box-shadow: 0 1rem 2rem rgba(247, 193, 193, 0.5);
+    width: 50%;
+    padding: 1rem 1rem 1rem 2rem;
+    transition-property: all 500ms ease;
+}
+
+.content .highlights:hover {
+    box-shadow: 0 1rem 2rem rgba(241, 74, 74, 0.7);
+}
+
+.content .news h1 {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.content .highlights h1 {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.content .news ul {
+    list-style-type: none;
+    line-height: 2.5rem;
+}
+
+.content .highlights ul {
+    list-style-type: none;
+    line-height: 2.5rem;
+}
+
+
+/* about page css*/
+
+.about {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.about .image {
+    width: 30%;
+    justify-content: center;
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+    margin-top: 2rem;
+    padding-bottom: 0;
+}
+
+.about .image:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .5);
+}
+
+.about .image img {
+    border-radius: 50%;
+    margin: 2rem 0 0 4rem;
+    box-shadow: 0 1rem 2rem rgba(241, 76, 76, 0.3);
+}
+
+.about .image img:hover {
+    box-shadow: 0 1rem 2rem rgba(247, 27, 27, 0.5);
+}
+
+.about .content {
+    width: 70%;
+    background-color: rgb(247, 87, 87);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+}
+
+.about .content:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .5);
+}
+
+.about .content .name {
+    color: #fff;
+    padding: 2rem 1rem 2rem 2rem;
+    padding-bottom: .2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: normal;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+}
+
+.about .content p {
+    color: #fff;
+    padding: 2rem 1rem 2rem 2rem;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+}
+
+footer .f-body {
+    background-color: #6B6B6B;
+}
+
+footer .share {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+footer .share .btn {
+    margin: 0 .5rem 0 .5rem;
+    padding: .8rem;
+    box-shadow: 0 1rem 2rem rgba(8, 9, 15);
+}
+
+footer .share .btn:hover {
+    background-color: rgb(14, 15, 19);
+}
+
+footer .widget img {
+    width: 100px;
+    height: 100px;
+}
+
+footer .share .widget button {
+    margin-left: 40px;
+}
+
+
+/* alumni dashboard design */
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: url(/static/images/al5.jfif);
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+.banner .container .contentbox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 13%;
+    color: #fff;
+}
+
+.banner .container .contentbox p {
+    color: #F5DEB3;
+}
+
+.banner .container .contentbox h1 {
+    color: #F5DEB3;
+}

@@ -1,0 +1,292 @@
+{%load static %}
+<!doctype html5>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{%static 'css/style.css' %}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9c3417e0b5.js" crossorigin="anonymous"></script>
+
+
+    <title>Alumni management system</title>
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="d-flex  mainhead">
+            <div class="logo">
+                <img src="{%static 'images/logo.png' %}" alt="">
+            </div>
+            <div class="collegename">
+                <h1>Rajkiya engineering college sonbhadra</h1>
+                <h4>Alumni Network</h4>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                {% comment %} <a class="navbar-brand" href="#">Navbar</a> {% endcomment %}
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " href="/index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About</a>
+                        </li>
+                        {% comment %} <li class="nav-item">
+                            <a class="nav-link" href="{% url 'department' %}">Department</a>
+                        </li> {% endcomment %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'gallary' %}">Gallary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'studentlogin' %}">Student-login</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="{% url 'studentsignup' %}">Student-signup</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'alumni_login' %}">Alumni-login</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'alumni_signup' %}">Alumni-signup</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin">Admin</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Department</a></li>
+                                <li><a class="dropdown-item" href="#">Another department</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- header end-->
+
+    <!-- slider for colllege photos start-->
+    <section class="slider1">
+        <div id="slider1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{%static 'images/firstslide1.jfif'%}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Rec Sonbhadra Alumni society.</h5>
+                        <p>Alumni ,who helps us to choose the right path for the future.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{%static 'images/firstslide2.jpg'%}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        {% comment %} <h5></h5> {% endcomment %}
+                        <p>The work done in the present is the result of the future</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{%static 'images/firstslide3.jpg'%}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Overall Devlopement</h5>
+                        <p>A Multi-talented student always pleased by the society.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slider1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slider1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- slider for colllege photos end-->
+
+    <!-- slider for the alumani start -->
+
+    <section class="slider2">
+        <div class="container">
+            <div id="slider2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- slider 1 for slider2 start-->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-3"><img src="{%static 'images/slidesec1.jpg'%}" class="d-block w-250 h-5000" alt="..."></div>
+                            {% comment %} <div class="col-3"><img src="{%static 'images/a2.jfif'%}" class="d-block w-100" alt="..."></div>
+                            <div class="col-3"><img src="{%static 'images/a3.jfif'%}" class="d-block w-100" alt="..."></div>
+                            <div class="col-3"><img src="{%static 'images/a4.jfif'%}" class="d-block w-100" alt="..."></div> {% endcomment %}
+                        </div>
+                    </div>
+                    <!-- slider 1 for slider 2 end -->
+                    
+                    <!-- slider2 for slider 2 start -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-3"><img src="{%static 'images/slidesec3.jpg'%}" class="d-block w-250 h-5000" alt="..."></div>
+                            {% comment %} <div class="col-3"><img src="{%static 'images/a6.jfif'%}" class="d-block w-100 h-40" alt="..."></div>
+                            <div class="col-3"><img src="{%static 'images/a8.jfif'%}" class="d-block w-100 h-40" alt="..."></div>
+                            <div class="col-3"><img src="{%static 'images/a1.jfif'%}" class="d-block w-100 h-40" alt="..."></div> {% endcomment %}
+                        </div>
+                    </div>
+                    <!-- slider2 for slider 2 end -->
+
+                    <!-- slider3 for slider 3 start -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-3"><img src="{%static 'images/a4.jfif'%}" class="d-block w-100 h-40" alt="..."></div>
+                            <div class="col-3"><img src="{%static 'images/a5.jfif'%}" class="d-block w-100 h-40" alt="..."></div>
+                            <div class="col-3"><img src="{%static 'images/a6.jfif'%}" class="d-block w-100 h-40" alt="..."></div>
+                            <div class="col-3"><img src="{%static 'images/a8.jfif'%}" class="d-block w-100 h-40" alt="..."></div>
+                        </div>
+                    </div>
+                    <!-- slider3 for slider 3 end -->
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#slider2" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slider2" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- slider for the alumani end -->
+
+    <section class="statement container">
+        <p>The Alumni community is one of the pillars on which the Institute stands. They act as brand ambassadors of the institute and provide to the institute and its students an incredible network for mentorship and other academic and professional engagements. The Rec Sonbhadra alumni community is about 300+ strong now, spread across the metropolitan cities of India. Rec Sonbhadra is now making a constant and consistent effort to engage with the alumni through various programmes launched in the past months. We welcome suggestions from our valued alumni friends on ways and means to make this bond stronger, effective and live up to the vision and motto of the institution of transforming society.</p>
+
+    </section>
+
+
+    <!-- content section started -->
+    <section class="content container d-flex">
+        <div class="news">
+            <h1>Current News</h1>
+            <ul>
+                <li><a href="#">Alumni meet in December</a></li>
+                <li><a href="#">Final year project submission</a></li>
+                <li><a href="#">Nptel programmes registration</a></li>
+                <li><a href="#">this is the current news</a></li>
+                <li><a href="#">this is the current news</a></li>
+                <li><a href="#">this is the current news</a></li>
+                <li><a href="#">this is the current news</a></li>
+            </ul>
+        </div>
+
+
+        <div class="highlights">
+            <h1>Current Jobs</h1>
+            <ul>
+                <li><a href="#">Web-development trainee</a></li>
+                <li><a href="#">Software engineer trainee</a></li>
+                <li><a href="#">Backend developer post</a></li>
+                <li><a href="#">this is the current jobs</a></li>
+                <li><a href="#">this is the current jobs</a></li>
+                <li><a href="#">this is the current jobs</a></li>
+                <li><a href="#">this is the current jobs</a></li>
+            </ul>
+
+
+        </div>
+    </section>
+    <!-- contetnt section end -->
+
+
+
+    <!-- footer section start -->
+    <footer>
+        <div class="f-body d-flex flex-column">
+            <div class="share d-flex justify-content-center">
+                <div class="widget">
+                    <img class="footer-logo d-block m-auto rounded-circle" alt="" src="{%static 'images/logo.png' %}">
+                    <h4 class="text-white text-center mb-0">Rajkiya Engineering College Sonbhadra</h4>
+                    <p class="text-center text-light">Robertsganj Churk</p>
+                    <ul class="list-inline text-center">
+                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-white mr-5"></i> <a class="text-white text-decoration-none" href="tel:011-2659-7135">011-2659-7135</a> </li>
+                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-white mr-5"></i> <a class="spamspan text-white text-decoration-none" href=""><strong>info</strong>@recsonbhadra.ac.in</a> </li>
+                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-white mr-5"></i> <a class="text-white  " href="http://recsonbhadra.ac.in" target="_blank">www.recsonbhadra.ac.in</a> </li>
+                    </ul>
+                    <button class="btn btn-light rounded-circle"><a href="#" class="fab fa-facebook f"></a></button>
+                    <button class="btn btn-light rounded-circle"><a href="#" class="fab fa-twitter"></a></button>
+                    <button class="btn btn-light rounded-circle"><a href="#" class="fab fa-instagram"></a></button>
+                    <button class="btn btn-light rounded-circle"><a href="#" class="fab fa-pinterest"></a></button>
+                    <button class="btn btn-light rounded-circle"><a href="#" class="fab fa-linkedin"></a></button>
+
+                </div>
+            </div>
+            <div class="container pt-20 pb-20 mb-4">
+                <div class="row">
+                    <div class="">
+                        <p class="font-13 text-white m-0 text-center">Copyright © 2021 Rajkiya Engineering College Sonbhadra. All Rights Reserved.</p>
+
+                    </div>
+                    <div class="text-center">
+                        <div class="widget no-border m-0">
+                            <div class="col-md-12">
+                                <p class="font-13 text-white m-0 sm-text-center">Developed and Maintained by <a class="text-white" target="_blank" href="http://recsonbhadra.ac.in">Rajkiya Engineering College Sonbhadra</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end-->
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+
+
+</body>
+
+</html>

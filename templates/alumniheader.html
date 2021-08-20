@@ -1,0 +1,119 @@
+<!doctype html5>
+<html lang="en">
+
+<head>
+    {%load static%}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alumni Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{%static 'css/alumni_dashboard.css' %}" rel="stylesheet">
+    <link href="{%static 'css/alumni_signup.css' %}" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/9c3417e0b5.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+ <header>
+        <div class="d-flex  mainhead">
+            <div class="logo">
+                <img src="{%static 'images/logo.png' %}" alt="">
+            </div>
+            <div class="collegename">
+                <h1>Rajkiya engineering college sonbhadra</h1>
+                <h4>Alumni Network</h4>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index">Home</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="/gallary">Gallary</a>
+                        </li>
+
+
+                       
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'create_blog' %}">Create Blog</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'managepost' %}">Manage Blog</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'allpost' %}">All Posts</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="/index">Logout</a>
+                        </li>
+
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+ {% block body%}
+
+ {% endblock body %}
+ <footer>
+        <div class="f-body d-flex flex-column">
+            <div class="share d-flex justify-content-center">
+                <div class="widget">
+                    <img class="footer-logo d-block m-auto rounded-circle" alt="" src="{%static 'images/logo.png' %}">
+                    <h4 class="text-white text-center mb-0">Rajkiya Engineering College Sonbhadra</h4>
+                    <p class="text-center text-light">Robertsganj Churk</p>
+                    <ul class="list-inline text-center">
+                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-white mr-5"></i> <a class="text-white text-decoration-none" href="tel:011-2659-7135">011-2659-7135</a> </li>
+                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-white mr-5"></i> <a class="spamspan text-white text-decoration-none" href=""><strong>info</strong>@recsonbhadra.ac.in</a> </li>
+                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-white mr-5"></i> <a class="text-white  " href="http://recsonbhadra.ac.in" target="_blank">www.recsonbhadra.ac.in</a> </li>
+                    </ul>
+                    <button class="btn btn-light rounded-circle"><a href="#" class="fab fa-facebook f"></a></button>
+                    <button class="btn btn-light rounded-circle"><a href="#" class="fab fa-twitter"></a></button>
+                    <button class="btn btn-light rounded-circle"><a href="#" class="fab fa-instagram"></a></button>
+                    <button class="btn btn-light rounded-circle"><a href="#" class="fab fa-pinterest"></a></button>
+                    <button class="btn btn-light rounded-circle"><a href="#" class="fab fa-linkedin"></a></button>
+
+                </div>
+            </div>
+            <div class="container pt-20 pb-20 mb-4">
+                <div class="row">
+                    <div class="">
+                        <p class="font-13 text-white m-0 text-center">Copyright © 2021 Rajkiya Engineering College Sonbhadra. All Rights Reserved.</p>
+
+                    </div>
+                    <div class="text-center">
+                        <div class="widget no-border m-0">
+                            <div class="col-md-12">
+                                <p class="font-13 text-white m-0 sm-text-center">Developed and Maintained by <a class="text-white" target="_blank" href="http://recsonbhadra.ac.in">Rajkiya Engineering College Sonbhadra</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end-->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+</body>
+</html>
